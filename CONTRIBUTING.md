@@ -9,3 +9,9 @@
     poetry install
     poetry shell
     ```
+
+### Starting development server 
+```
+cd src 
+python manage.py runserver
+```
