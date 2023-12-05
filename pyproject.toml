@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "django_tree_menu"
+version = "0.1.0"
+description = ""
+license = "Proprietary"
+authors = ["Ekaterina <katerina.rubelle@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
