@@ -7,3 +7,6 @@ Added the Poetry dependency manager and essential documentation and tools includ
 
 #### task-2: Created Django app
 Created `tree_menu` project and `menu` app. 
+
+#### task-3: Replaced SQLite with PostgreSQL
+Added connection to database PostgreSQL.
