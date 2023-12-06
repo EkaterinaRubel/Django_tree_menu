@@ -11,6 +11,18 @@
     ```
 
 ### Starting development server 
+#### Preparing DataBase
+Run the Docker container with the database.
+```
+docker compose up postgres
+```
+Create the database by executing the file `tools/db_initialization.sql`.
+Create the tables for INSTALLED_APPS.
+```
+cd src
+python manage.py migrate
+```
+#### Start development server.
 ```
 cd src 
 python manage.py runserver
