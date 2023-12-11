@@ -22,8 +22,16 @@ Create the tables for INSTALLED_APPS.
 cd src
 python manage.py migrate
 ```
-#### Start development server.
+Migrations was created by command:
+```
+python manage.py makemigrations menu
+```
+Run migrate.
+```
+python manage.py migrate
+```
+#### Start development server
 ```
 cd src 
-python manage.py runserver
+python3 manage.py runserver
 ```

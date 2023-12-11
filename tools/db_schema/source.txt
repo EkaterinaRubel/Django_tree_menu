@@ -1,0 +1,17 @@
+# https://dbdiagram.io/d
+
+Table Menu {
+  id int [pk, increment]
+  name varchar [unique, not null]
+  description text
+}
+
+Table MenuItem {
+  id int [pk, increment]
+  name varchar [unique, not null]
+  description text
+  url varchar
+  url_name varchar
+  parent int [null, ref: > MenuItem.id]
+  menu int [not null, ref: > Menu.id]
+}
