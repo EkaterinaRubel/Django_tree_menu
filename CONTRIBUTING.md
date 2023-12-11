@@ -30,6 +30,14 @@ Run migrate.
 ```
 python manage.py migrate
 ```
+#### Preparing superuser
+Create a user who can login to the admin site.
+```
+python manage.py createsuperuser
+Username: admin
+Email address: admin@example.com
+Password: password
+```
 #### Start development server
 ```
 cd src 
