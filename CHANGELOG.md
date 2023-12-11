@@ -19,3 +19,6 @@ Implemented menu editing in the standard Django admin panel.
 
 #### task-6: Added basic tree menu
 Added basic tree menu.
+
+#### task-7: Added django-debug-toolbar
+Added django-debug-toolbar for inspection SQL queries.
