@@ -43,3 +43,8 @@ Password: password
 cd src 
 python3 manage.py runserver
 ```
+
+### Testing
+```
+python manage.py test menu
+```

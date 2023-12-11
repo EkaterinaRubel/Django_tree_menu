@@ -4,6 +4,7 @@ Tree Menu is a Django project that implements a tree-like menu for websites. Thi
 ## Technology Stack
 - Django
 - PostgreSQL
+- unittest
 
 ## Installation
 [Contributing Guidelines](CONTRIBUTING.md)

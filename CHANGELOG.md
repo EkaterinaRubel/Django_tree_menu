@@ -16,3 +16,6 @@ Created models Menu, MenuItem and ran migrations.
 
 #### task-5: Implemented menu editing in the admin panel
 Implemented menu editing in the standard Django admin panel.
+
+#### task-6: Added basic tree menu
+Added basic tree menu.
