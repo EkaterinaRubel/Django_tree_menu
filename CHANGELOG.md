@@ -13,3 +13,6 @@ Added connection to database PostgreSQL.
 
 #### task-4: Created models and migrations
 Created models Menu, MenuItem and ran migrations.
+
+#### task-5: Implemented menu editing in the admin panel
+Implemented menu editing in the standard Django admin panel.
