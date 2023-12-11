@@ -10,3 +10,6 @@ Created `tree_menu` project and `menu` app.
 
 #### task-3: Replaced SQLite with PostgreSQL
 Added connection to database PostgreSQL.
+
+#### task-4: Created models and migrations
+Created models Menu, MenuItem and ran migrations.
