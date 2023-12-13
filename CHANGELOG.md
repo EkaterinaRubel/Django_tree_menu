@@ -22,3 +22,6 @@ Added basic tree menu.
 
 #### task-7: Added django-debug-toolbar
 Added django-debug-toolbar for inspection SQL queries.
+
+#### task-8: Implemented URL handling in menu items
+Enhanced menu items to support both explicit and named URLs for navigation.
