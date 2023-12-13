@@ -1,7 +1,8 @@
 from django.test import TestCase
+from django.urls import reverse
 
 from menu.models import Menu, MenuItem
-from menu.utils import get_all_menu_items, build_menu_tree
+from menu.utils import build_menu_tree, get_all_menu_items
 
 class MenuUtilsTests(TestCase):
     """Test suite for menu utility functions."""
@@ -37,3 +38,29 @@ class MenuUtilsTests(TestCase):
         items = MenuItem.objects.filter(menu__name="Test Menu").order_by('id')
         tree = build_menu_tree(items)
         self.assertNotIn(self.another_root_item, tree)
+
+
+class MenuItemModelTests(TestCase):
+    """Test suite for reverse url by named url."""
+
+    def setUp(self):
+        self.menu = Menu.objects.create(name="Test Menu")
+        self.item_with_named_url = MenuItem.objects.create(
+            name="Named URL Item",
+            menu=self.menu,
+            url_name="home"
+        )
+        self.item_with_explicit_url = MenuItem.objects.create(
+            name="Explicit URL Item",
+            menu=self.menu,
+            url="/explicit-url/"
+        )
+
+    def test_get_absolute_url_with_named_url(self):
+        """get_absolute_url returns the correct URL for an item with a named URL.""" 
+        expected_url = reverse("home")
+        self.assertEqual(self.item_with_named_url.get_absolute_url(), expected_url)
+
+    def test_get_absolute_url_with_explicit_url(self):
+        """get_absolute_url returns the explicitly defined URL for an item."""
+        self.assertEqual(self.item_with_explicit_url.get_absolute_url(), "/explicit-url/")
