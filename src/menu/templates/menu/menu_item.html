@@ -2,10 +2,10 @@
     {% load menu_extras %}
     <a href="{{ item.get_absolute_url }}">{{ item.name }}</a>
     {% with menu_tree|get:item.id as list_of_children %} 
-        {% if list_of_children %}
+        {% if list_of_children and item in active_path %}
             <ul>
                 {% for child in list_of_children %}
-                    {% include "menu/menu_item.html" with item=child menu_tree=menu_tree %}
+                    {% include "menu/menu_item.html" with item=child menu_tree=menu_tree parent=item %}
                 {% endfor %}
             </ul>
         {% endif %}
