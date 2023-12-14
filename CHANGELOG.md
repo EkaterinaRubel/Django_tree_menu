@@ -25,3 +25,6 @@ Added django-debug-toolbar for inspection SQL queries.
 
 #### task-8: Implemented URL handling in menu items
 Enhanced menu items to support both explicit and named URLs for navigation.
+
+#### task-9: Implemented active menu item determining based on current URL
+The active menu item is identified and styled using CSS.

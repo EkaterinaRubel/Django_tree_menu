@@ -1,9 +1,6 @@
-<!-- menu_template.html -->
 <ul>
-    {% for item in menu_items %}
-        {% if not item.parent %}
-            {% include "menu/menu_item.html" with item=item menu_items=menu_items %}
-        {% endif %}
+    {% for item in menu_items_no_parent %}
+        {% include "menu/menu_item.html" with item=item menu_tree=menu_tree %}
     {% endfor %}
 </ul>
 
