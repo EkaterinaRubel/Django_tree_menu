@@ -1,7 +1,7 @@
 """Module contains custom template tags."""
 from django import template
 
-from menu.utils import build_menu_tree, get_all_menu_items
+from menu.utils import build_menu_tree, get_all_menu_items, get_menu_path
 
 register = template.Library()
 
@@ -23,8 +23,10 @@ def draw_menu(context, menu_name):
     current_url = request.path
     all_items = get_all_menu_items(menu_name)
     menu_tree = build_menu_tree(all_items)
+    active_path = get_menu_path(all_items, current_url)
     return {
         'menu_items_no_parent': menu_tree.get(None),
         'menu_tree': menu_tree,
         'current_url': current_url,
+        'active_path': active_path,
     }

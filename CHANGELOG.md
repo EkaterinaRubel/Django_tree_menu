@@ -28,3 +28,6 @@ Enhanced menu items to support both explicit and named URLs for navigation.
 
 #### task-9: Implemented active menu item determining based on current URL
 The active menu item is identified and styled using CSS.
+
+#### task-10: Implemented menu expansion to the active item and its hierarchy
+All menu items above the active item and the first level of items below it are expanded.

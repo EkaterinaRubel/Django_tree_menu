@@ -32,3 +32,26 @@ def build_menu_tree(all_items):
             tree[item.parent_id] = []
         tree[item.parent_id].append(item)
     return tree
+
+
+def get_menu_path(all_items, current_url):
+    """
+    Recursively build the path from the root to the active menu item.
+
+    Args:
+        all_items (QuerySet): A QuerySet of MenuItem objects to search through.
+        current_url (str): current page URL to find the active menu item.
+
+    Returns:
+        list: A list of MenuItem objects
+        representing the path from the root to the active item.
+    """
+    for item in all_items:
+        if item.get_absolute_url() == current_url:
+            if item.parent:
+                parent_path = get_menu_path(
+                    all_items,
+                    item.parent.get_absolute_url(),
+                )
+                return parent_path + [item]
+            return [item]
