@@ -1,3 +1,4 @@
+"""This module contains the application configuration for the 'menu' app."""
 from django.apps import AppConfig
 
 

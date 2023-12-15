@@ -1,5 +1,7 @@
+"""This module defines the models for the 'menu' application."""
 from django.db import models
 from django.urls import reverse
+
 
 class Menu(models.Model):
     """
@@ -64,9 +66,18 @@ class MenuItem(models.Model):
         verbose_name_plural = 'Menu Items'
 
     def get_absolute_url(self):
+        """
+        Retrieve the absolute URL for the menu item.
+
+        Returns the URL, either by reversing the named URL
+        if 'url_name' is specified, or by returning the explicit 'url'.
+
+        Returns:
+            str: The absolute URL as a string.
+        """
         if self.url_name:
             return reverse(self.url_name)
         return self.url
-    
+
     def __str__(self):
         return self.name
