@@ -7,3 +7,16 @@ services:
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=admin
+
+  tree_menu:
+    image: tree_menu:1
+    container_name: tree_menu_conteiner
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=django_tree_menu

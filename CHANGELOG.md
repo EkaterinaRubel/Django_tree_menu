@@ -34,3 +34,6 @@ All menu items above the active item and the first level of items below it are e
 
 #### task-11: Performed code refactoring 
 Improved code styling to PEP 8 standards, adding docstrings.
+
+#### task-12: Dockerized django app and added initialization script
+Wrapped the Django application in a Docker container. Created an initialization script (`init-script.sh`) to creation database, migrations, and superuser.
