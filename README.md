@@ -14,6 +14,7 @@ Tree Menu is a Django project that implements a tree-like menu for websites. The
 - Django
 - PostgreSQL
 - unittest
+- Docker (+ Custom Initialization Script for creation database, migrations, and superuser.)
 
 ## Installation
 [Contributing Guidelines](CONTRIBUTING.md)

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-y82)ar%p#z1b1w@wg*jm$3+0icelnztsz53_=&dqu-8yr24p#7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'django_tree_menu',
         "USER": "admin",
         "PASSWORD": "password",
-        "HOST": "127.0.0.1",
+        "HOST": os.getenv('DATABASE_HOST', 'localhost'),
         "PORT": "5432",
     }
 }
