@@ -31,3 +31,6 @@ The active menu item is identified and styled using CSS.
 
 #### task-10: Implemented menu expansion to the active item and its hierarchy
 All menu items above the active item and the first level of items below it are expanded.
+
+#### task-11: Performed code refactoring 
+Improved code styling to PEP 8 standards, adding docstrings.

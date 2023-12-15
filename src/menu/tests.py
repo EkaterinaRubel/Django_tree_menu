@@ -1,3 +1,4 @@
+"""This module contains unit tests for the 'menu' application."""
 from django.test import TestCase
 from django.urls import reverse
 
